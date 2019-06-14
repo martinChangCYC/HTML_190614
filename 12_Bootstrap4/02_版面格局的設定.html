@@ -15,6 +15,12 @@
   
   <title>Bootstrap</title>
 
+  <style>
+    .box-color div:nth-child(odd) { background-color: #ff962e; }
+    .box-color div:nth-child(even) { background-color: #14e478; }
+    .box-color div { height: 80px; }
+  </style>
+
   <!-- 如何選取到基數列和偶數列的元素 -->
 </head>
 
@@ -79,7 +85,7 @@
   <main>
     <!-- .container 固定寬度 或 .container-fluid 滿版  -->
     <div class="container">
-      <div class="row">
+      <div class="row box-color">
         <!-- 請參考 調整版面測試.png -->
         <div class="col-sm-6 col-md-4 col-lg-2">A</div>
         <div class="col-sm-6 col-md-8 col-lg-2">B</div>

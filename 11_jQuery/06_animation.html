@@ -17,18 +17,61 @@
     <img id="smoke" src="img/Smoke2.png">
     <img id="tara" src="img/tara1.png">
     <img id="teak" src="img/teak2.png">
+    <img id="teak" src="img/doge.GIF">
+
+    <img id="kutar" src="img/kutar3.png">
+    <img id="navy" src="img/Navy1.png">
+    <img id="pika" src="img/pika2.png">
+    <img id="smoke" src="img/Smoke2.png">
+    <img id="tara" src="img/tara1.png">
+    <img id="teak" src="img/teak2.png">
+    <img id="teak" src="img/doge.GIF">
+
+    <img id="kutar" src="img/kutar3.png">
+    <img id="navy" src="img/Navy1.png">
+    <img id="pika" src="img/pika2.png">
+    <img id="smoke" src="img/Smoke2.png">
+    <img id="tara" src="img/tara1.png">
+    <img id="teak" src="img/teak2.png">
+    <img id="teak" src="img/doge.GIF">
 
 
     <script>
-        // 1.先讓圖片可以移動
+        $(() => {
+            loops = [];
+            // 1.先讓圖片可以移動
+            $('#startMove').click(() => {
+                for (let index = 0; index < loops.length; index++) {
+                    clearInterval(loops[index]);
+                }
+                console.log(loops);
+                loops = [];
+                
+                $('img').css({
+                    'position': 'absolute',
+                });
 
-        // 2.讓圖片移動的數值不固定
+                $('img').each(function() {
+                    var time = Math.random() * 1000;
+                    var el = this;
+                    var loop = setInterval(function() {
+                        $(el).animate({
+                            'top': Math.random() * 500,
+                            'left': Math.random() * 800,
+                        }, time);
+                    }, time);
+                    loops.push(loop);
+                });
+            });
 
-        // 3.讓圖片有自己的亂數設定 .each()
+            // 2.讓圖片移動的數值不固定
 
-        // 4.讓圖片有滑動的效果
+            // 3.讓圖片有自己的亂數設定 .each()
 
-        // 5.讓圖片自己動起來吧
+            // 4.讓圖片有滑動的效果
+
+            // 5.讓圖片自己動起來吧
+        });
     </script>
 </body>
 

@@ -58,18 +58,39 @@
     <script>
         // 試試看 addClass、removeClass，以及各種selector
         // 1. div裡面的p => 紅
+        $('#btn1').click(() => {
+            $('#div1 > p').addClass('bgred');
+        });
         
         // 2. 整個div    => 藍
+        $('#btn2').click(() => {
+            $('#div1').addClass('bgblue');
+        });
         
         // 3. div後面第1個p => 綠
+        $('#btn3').click(() => {
+            $('#div1 + p').addClass('bggreen');
+        });
         
         // 4. div後面所有p => 橘
+        $('#btn4').click(() => {
+            $('#div1 ~ p').addClass('bgorange');
+        });
         
         // 5. 所有的div和p => 粉
+        $('#btn5').click(() => {
+            $('div ,p').addClass('bgpink');
+        });
         
         // 6. 只要在div裡面的p => 灰
+        $('#btn6').click(() => {
+            $('div p').addClass('bggray');
+        });
         
         // 移除所有
+        $('#btnRemove').click(() => {
+            $('div, p').removeClass();
+        });
 
     </script>
 </body>
